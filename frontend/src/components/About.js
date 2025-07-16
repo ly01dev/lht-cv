@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaUser, FaCode, FaChartLine, FaLightbulb, FaRocket, FaUsers } from 'react-icons/fa';
@@ -6,27 +6,6 @@ import './About.css';
 
 const About = () => {
   const { t } = useTranslation();
-  const [profile, setProfile] = useState(null);
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const response = await fetch('/api/profile');
-        const data = await response.json();
-        setProfile(data);
-      } catch (error) {
-        console.error('Error fetching profile:', error);
-        setProfile({
-          name: t('hero.name'),
-          title: t('hero.title'),
-          about: t('about.description'),
-          location: 'Ho Chi Minh City, Vietnam'
-        });
-      }
-    };
-
-    fetchProfile();
-  }, [t]);
 
   const features = useMemo(() => [
     {
@@ -61,10 +40,6 @@ const About = () => {
     }
   ], [t]);
 
-  if (!profile) {
-    return <div className="about-loading">{t('common.loading')}</div>;
-  }
-
   return (
     <section id="about" className="about">
       <div className="container">
@@ -91,10 +66,7 @@ const About = () => {
           >
             <div className="about-intro">
               <h3>{t('about.whoIAm')}</h3>
-              <p>{profile.about}</p>
-              <p>
-                {t('about.description')}
-              </p>
+              <p>{t('about.description')}</p>
             </div>
 
             <div className="about-stats">
