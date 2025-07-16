@@ -37,3 +37,4 @@ jobs:
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./frontend/build
+          force_orphan: true

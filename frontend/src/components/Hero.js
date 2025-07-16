@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
@@ -6,36 +6,19 @@ import './Hero.css';
 
 const Hero = () => {
   const { t } = useTranslation();
-  const [profile, setProfile] = useState(null);
 
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const response = await fetch('/api/profile');
-        const data = await response.json();
-        setProfile(data);
-      } catch (error) {
-        console.error('Error fetching profile:', error);
-        // Fallback data
-        setProfile({
-          name: t('hero.name'),
-          title: t('hero.title'),
-          email: 'lyhuuthanhtv@gmail.com',
-          phone: '+84 372 917 006',
-          location: 'Ho Chi Minh City, Vietnam',
-          about: t('hero.description'),
-          social: {
-            linkedin: 'https://www.linkedin.com/in/thanh-ly-40a763215/',
-            github: 'https://github.com/ly01dev',
-            // twitter: 'https://twitter.com/yourhandle',
-            // facebook: 'https://facebook.com/yourprofile'
-          }
-        });
-      }
-    };
-
-    fetchProfile();
-  }, [t]);
+  const profile = {
+    name: t('hero.name'),
+    title: t('hero.title'),
+    email: 'lyhuuthanhtv@gmail.com',
+    phone: '+84 372 917 006',
+    location: 'Ho Chi Minh City, Vietnam',
+    about: t('hero.description'),
+    social: {
+      linkedin: 'https://www.linkedin.com/in/thanh-ly-40a763215/',
+      github: 'https://github.com/ly01dev',
+    }
+  };
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
@@ -43,10 +26,6 @@ const Hero = () => {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  if (!profile) {
-    return <div className="hero-loading">{t('common.loading')}</div>;
-  }
 
   return (
     <section id="home" className="hero">
@@ -198,78 +177,54 @@ const Hero = () => {
                 <div className="info-value-with-qr">
                   <span className="info-value">{t('hero.info.telegramValue')}</span>
                   <div className="qr-code-popup">
-                    <img src="/images/tele.jpg" alt="Telegram QR Code" />
+                    <img src="/images/telegram.jpg" alt="Telegram QR Code" />
                     <span>{t('hero.info.scanToConnect')}</span>
                   </div>
                 </div>
               </div>
             </motion.div>
-          </motion.div>
 
-          <motion.div
-            className="hero-visual"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="hero-avatar">
-                <div className="avatar-image">
-                  <img src="/images/muadong.jpg" alt="thanh-ly" />
-              </div>
-            </div>
-            
             <motion.div
-              className="social-links"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              className="hero-social"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
             >
-              {profile.social && profile.social.github && (
-              <motion.a
-                href={profile.social.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaGithub />
-              </motion.a>
-              )}
-              {profile.social && profile.social.linkedin && (
-              <motion.a
+              <a
                 href={profile.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
+                aria-label="LinkedIn"
               >
                 <FaLinkedin />
-              </motion.a>
-              )}
-              {/* Temporarily hidden social links */}
-              {/* <motion.a
-                href={profile.social.twitter}
+              </a>
+              <a
+                href={profile.social.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
+                aria-label="GitHub"
               >
-                <FaTwitter />
-              </motion.a> */}
-              {/* <motion.a
-                href={profile.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaFacebook />
-              </motion.a> */}
+                <FaGithub />
+              </a>
             </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="hero-image"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="profile-image-container">
+              <img
+                src="/images/thanh-ly.png"
+                alt={profile.name}
+                className="profile-image"
+              />
+              <div className="profile-image-border"></div>
+            </div>
           </motion.div>
         </div>
 
@@ -280,14 +235,13 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 1.6 }}
         >
           <motion.button
-            className="scroll-button"
             onClick={scrollToAbout}
+            className="scroll-button"
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            whileHover={{ scale: 1.1 }}
           >
             <FaArrowDown />
-            <span>{t('hero.scroll')}</span>
+            <span>{t('hero.scrollDown')}</span>
           </motion.button>
         </motion.div>
       </div>
