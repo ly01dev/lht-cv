@@ -1,0 +1,210 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Ly Huu Thanh",
+    "title": "Full Stack Developer",
+    "subtitle": "Passionate about creating innovative web solutions",
+    "description": "I'm a dedicated developer with expertise in modern web technologies, focused on building scalable and user-friendly applications.",
+    "cta": "Get In Touch",
+    "scroll": "Scroll Down",
+    "viewWork": "View My Work",
+    "info": {
+      "location": "Location",
+      "locationValue": "Ho Chi Minh City, Vietnam",
+      "email": "Email",
+      "phone": "Phone",
+      "zalo": "Zalo",
+      "zaloValue": "thanhly.itweb",
+      "telegram": "Telegram",
+      "telegramValue": "@stephen_itweb",
+      "scanToConnect": "Scan to connect"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know me better",
+    "description": "I began my career as a teacher – a role that helped me develop communication skills, patience, and a high sense of responsibility in supporting others' growth. In 2020, I transitioned to Digital Marketing, opening a new journey where I had the opportunity to explore the power of technology and strategic thinking.\n\nIn 2021, I took on the role of Advertising Team Leader at Winner Company, responsible for implementing communication campaigns, recruitment, and training new personnel. This period helped me perfect team leadership skills and effective organizational thinking.\n\nMoving into 2022, I joined Taipei101 Company (later OKVIP) as an SEO Website Specialist. Thanks to my experience and capabilities, I was assigned as the Lead Trainer for an SEO team and simultaneously served as an assistant to the SEO manager. In this role, I was not only responsible for training SEO operations for team members but also supported monitoring, evaluating work effectiveness, and particularly detecting and handling fraudulent behaviors during website optimization – a job requiring finesse, logical analysis, and deep understanding of search algorithms.\n\nIn May 2024, I proactively paused my work to travel abroad, seeking to rediscover life's emotions and reorient myself. During this time, I discovered my true passion for technology and was determined to transform myself into a programmer. I enrolled in a Fullstack Web Developer course at Pantech Company while continuously self-studying and practicing daily.\n\nIn May 2025, I returned to Vietnam and began a new journey as a Fullstack Web Developer – carrying with me the combination of education, marketing, management, and programming, along with the desire to create technology products with real value.",
+    "whoIAm": "Who I Am",
+    "yearsExperience": "Years of Experience",
+    "projectsCompleted": "Projects Completed",
+    "happyClients": "Happy Clients",
+    "technologies": "Technologies",
+    "basedIn": "Based in",
+    "locationDescription": "I'm currently based in Ho Chi Minh City, Vietnam and ready for remote work opportunities worldwide. I'm passionate about collaborating with teams and clients from diverse backgrounds and industries.",
+    "personalInfo": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "availability": "Availability",
+      "experience": "Years of Experience"
+    },
+    "values": {
+      "title": "My Values",
+      "innovation": "Innovation",
+      "quality": "Quality",
+      "collaboration": "Collaboration",
+      "learning": "Continuous Learning"
+    },
+    "features": {
+      "fullstack": {
+        "title": "Full Stack Development",
+        "description": "Expert in modern web technologies including React, Node.js and cloud platforms."
+      },
+      "marketing": {
+        "title": "Digital Marketing",
+        "description": "Proven track record in SEO, SEM, social media marketing and data analytics."
+      },
+      "problemSolving": {
+        "title": "Problem Solving",
+        "description": "Creative approach to complex technical and business challenges."
+      },
+      "fastDelivery": {
+        "title": "Fast Delivery",
+        "description": "Efficient project management and timely delivery of high-quality solutions."
+      },
+      "leadership": {
+        "title": "Team Leadership",
+        "description": "Experience leading development teams and mentoring junior developers."
+      },
+      "clientFocus": {
+        "title": "Client Focus",
+        "description": "Strong communication skills and commitment to client satisfaction."
+      }
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "My professional journey",
+    "present": "Present",
+    "months": "months",
+    "years": "years",
+    "responsibilities": "Key Responsibilities",
+    "achievements": "Key Achievements",
+    "technologies": "Technologies Used",
+    "positions": {
+      "fullstack": "Fullstack Web Developer",
+      "seo": "SEO Website Specialist & Lead Trainer",
+      "teamLeader": "Advertising Team Leader",
+      "marketing": "Digital Marketing Specialist",
+      "teacher": "Teacher"
+    },
+    "descriptions": {
+      "fullstack": "Currently working as a Fullstack Web Developer, combining educational background, marketing experience, management skills, and programming expertise to create technology products with real value.",
+      "seo": "Served as Lead Trainer for SEO team and assistant to SEO manager. Responsible for training team members, monitoring work effectiveness, and detecting fraudulent behaviors during website optimization. Required deep understanding of search algorithms and logical analysis.",
+      "teamLeader": "Led advertising team responsible for implementing communication campaigns, recruitment, and training new personnel. Developed strong leadership skills and effective organizational thinking.",
+      "marketing": "Transitioned from education to digital marketing, exploring the power of technology and strategic thinking. Developed skills in various digital marketing channels and strategies.",
+      "teacher": "Started career as a teacher, developing communication skills, patience, and high sense of responsibility in supporting others' growth. This foundation has been valuable throughout my career journey.",
+      "1": "Currently working as a Fullstack Web Developer, combining educational background, marketing experience, management skills, and programming expertise to create technology products with real value.",
+      "2": "Served as Lead Trainer for SEO team and assistant to SEO manager. Responsible for training team members, monitoring work effectiveness, and detecting fraudulent behaviors during website optimization. Required deep understanding of search algorithms and logical analysis.",
+      "3": "Led advertising team responsible for implementing communication campaigns, recruitment, and training new personnel. Developed strong leadership skills and effective organizational thinking.",
+      "4": "Transitioned from education to digital marketing, exploring the power of technology and strategic thinking. Developed skills in various digital marketing channels and strategies.",
+      "5": "Started career as a teacher, developing communication skills, patience, and high sense of responsibility in supporting others' growth. This foundation has been valuable throughout my career journey."
+    }
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "subtitle": "My technical capabilities",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "database": "Database & ORM",
+    "devops": "DevOps & Tools",
+    "languages": "Programming Languages",
+    "frameworks": "Frameworks & Libraries",
+    "tools": "Tools & Platforms"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Some of my recent work",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "technologies": "Technologies",
+    "description": "Description",
+    "features": "Key Features",
+    "preview": "Project Preview",
+    "todoList": {
+      "title": "TodoList Web Application",
+      "description": "A modern and responsive todo list application with full CRUD operations, user-friendly interface, and local storage functionality. Features include adding, editing, deleting tasks, marking as complete, and filtering options.",
+      "features": [
+        "Add, edit, and delete tasks",
+        "Mark tasks as complete/incomplete",
+        "Filter tasks by status",
+        "Local storage persistence",
+        "Responsive design for all devices",
+        "Clean and intuitive user interface"
+      ]
+    },
+    "filmApp": {
+      "title": "Film Trailer Platform",
+      "description": "A modern movie platform featuring trailers from YouTube with user interaction features. Users can browse movies, watch trailers, like/dislike, comment, and manage content with admin dashboard for content moderation.",
+      "features": [
+        "Browse and search movies",
+        "Watch movie trailers from YouTube",
+        "User authentication and profiles",
+        "Like, dislike and comment system",
+        "Admin dashboard for content management",
+        "Responsive design for all devices"
+      ]
+    }
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "My academic background",
+    "degree": "Degree",
+    "institution": "Institution",
+    "graduation": "Graduation Year",
+    "gpa": "GPA",
+    "relevantCourses": "Relevant Courses"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together",
+    "description": "I'm always interested in new opportunities and exciting projects. Feel free to reach out if you'd like to discuss potential collaborations.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Thank you! Your message has been sent successfully. I'll get back to you soon!",
+      "errorMessage": "Sorry, there was an error sending your message. Please try again or contact me directly via email."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "availability": "Availability",
+      "zalo": "Zalo",
+      "telegram": "Telegram"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 LyHuuThanh. All rights reserved.",
+    "madeWith": "Made with ❤️ using React & Node.js",
+    "social": "Connect With Me",
+    "quickLinks": "Quick Links"
+  },
+  "common": {
+    "downloadCV": "Download CV",
+    "viewMore": "View More",
+    "viewLess": "View Less",
+    "loading": "Loading...",
+    "loadingPortfolio": "Loading Portfolio...",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "language": "Language",
+    "readyToWork": "Ready to work together?",
+    "letsTalk": "Let's Talk",
+    "letsDiscuss": "Let's discuss your project and see how I can help bring your ideas to life. I'm always excited to take on new challenges and create innovative solutions."
+  }
+} 

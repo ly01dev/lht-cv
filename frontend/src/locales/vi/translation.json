@@ -1,0 +1,221 @@
+{
+  "header": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "experience": "Kinh nghiệm",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "education": "Học vấn",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "greeting": "Xin chào, tôi là",
+    "name": "Ly Huu Thanh",
+    "title": "Lập trình viên Full Stack",
+    "subtitle": "Đam mê tạo ra các giải pháp web sáng tạo",
+    "description": "Tôi là một lập trình viên Fullstack với nền tảng đa dạng từ giáo dục, marketing, quản lý đến lập trình. Tôi kết hợp tất cả kinh nghiệm này để tạo ra những sản phẩm công nghệ mang giá trị thực và giải pháp web sáng tạo.",
+    "cta": "Liên hệ ngay",
+    "scroll": "Cuộn xuống",
+    "viewWork": "Xem công việc của tôi",
+    "info": {
+      "location": "Địa chỉ",
+      "locationValue": "Thành phố Hồ Chí Minh, Việt Nam",
+      "email": "Email",
+      "phone": "Điện thoại",
+      "zalo": "Zalo",
+      "zaloValue": "thanhly.dev",
+      "telegram": "Telegram",
+      "telegramValue": "@thanhly_dev",
+      "scanToConnect": "Quét mã để kết nối"
+    }
+  },
+  "about": {
+    "title": "Về tôi",
+    "subtitle": "Tìm hiểu thêm về tôi và hiểu điều gì thúc đẩy đam mê của tôi với công nghệ",
+    "description": "Tôi bắt đầu sự nghiệp với vai trò giáo viên – một công việc giúp tôi rèn luyện khả năng truyền đạt, sự kiên nhẫn và tinh thần trách nhiệm cao trong việc hỗ trợ người khác phát triển. Năm 2020, tôi chuyển hướng sang lĩnh vực Digital Marketing, mở ra một hành trình mới, nơi tôi có cơ hội khám phá sức mạnh của công nghệ và tư duy chiến lược.\n\nNăm 2021, tôi đảm nhận vai trò Tổ trưởng quảng cáo nhân sự tại công ty Winner, chịu trách nhiệm triển khai các chiến dịch truyền thông, tuyển dụng và đào tạo nhân sự mới. Giai đoạn này giúp tôi hoàn thiện kỹ năng lãnh đạo đội nhóm và tư duy tổ chức hiệu quả.\n\nBước sang năm 2022, tôi gia nhập công ty Taipei101 (sau này là OKVIP) với vị trí chuyên viên SEO Website. Nhờ kinh nghiệm và năng lực, tôi được giao làm Huấn luyện viên chính cho một nhóm SEO và đồng thời là trợ lý cho chủ quản SEO. Trong vai trò này, tôi không chỉ phụ trách đào tạo nghiệp vụ SEO cho thành viên trong nhóm mà còn hỗ trợ giám sát, đánh giá hiệu quả công việc và đặc biệt là phát hiện, xử lý các hành vi gian lận trong quá trình tối ưu hóa website – một công việc đòi hỏi sự tinh tế, phân tích logic và hiểu biết sâu về thuật toán tìm kiếm.\n\nTháng 5 năm 2024, tôi chủ động tạm dừng công việc để sang nước ngoài, tìm lại cảm xúc sống và tái định hướng bản thân. Trong khoảng thời gian này, tôi khám phá ra đam mê thật sự của mình với công nghệ và quyết tâm chuyển mình thành một lập trình viên. Tôi theo học khóa Fullstack Web Developer tại công ty Pantech, đồng thời không ngừng tự học và thực hành thêm mỗi ngày.\n\nTháng 5 năm 2025, tôi trở về Việt Nam và bắt đầu hành trình mới với vai trò Lập trình viên Fullstack Web – mang theo hành trang là sự kết hợp giữa giáo dục, marketing, quản lý và lập trình, cùng khát khao tạo ra những sản phẩm công nghệ mang giá trị thực.",
+    "whoIAm": "Tôi là ai",
+    "yearsExperience": "Năm kinh nghiệm",
+    "projectsCompleted": "Dự án đã hoàn thành",
+    "happyClients": "Khách hàng hài lòng",
+    "technologies": "Công nghệ",
+    "basedIn": "Đang ở tại",
+    "locationDescription": "Tôi hiện đang ở tại Thành phố Hồ Chí Minh, Việt Nam và sẵn sàng cho các cơ hội làm việc từ xa trên toàn thế giới. Tôi đam mê hợp tác với các nhóm và khách hàng từ nhiều nền tảng và ngành nghề khác nhau.",
+    "personalInfo": {
+      "name": "Họ tên",
+      "email": "Email",
+      "phone": "Điện thoại",
+      "location": "Địa chỉ",
+      "availability": "Tình trạng",
+      "experience": "Năm kinh nghiệm"
+    },
+    "values": {
+      "title": "Giá trị của tôi",
+      "innovation": "Sáng tạo",
+      "quality": "Chất lượng",
+      "collaboration": "Hợp tác",
+      "learning": "Học hỏi liên tục"
+    },
+    "features": {
+      "fullstack": {
+        "title": "Phát triển Full Stack",
+        "description": "Chuyên gia về các công nghệ web hiện đại bao gồm React, Node.js và các nền tảng cloud."
+      },
+      "marketing": {
+        "title": "Tiếp thị số",
+        "description": "Thành tích đã được chứng minh trong SEO, SEM, tiếp thị mạng xã hội và phân tích dữ liệu."
+      },
+      "problemSolving": {
+        "title": "Giải quyết vấn đề",
+        "description": "Cách tiếp cận sáng tạo cho các thách thức kỹ thuật và kinh doanh phức tạp."
+      },
+      "fastDelivery": {
+        "title": "Giao hàng nhanh",
+        "description": "Quản lý dự án hiệu quả và giao các giải pháp chất lượng cao đúng hạn."
+      },
+      "leadership": {
+        "title": "Lãnh đạo nhóm",
+        "description": "Kinh nghiệm dẫn dắt các nhóm phát triển và hướng dẫn các lập trình viên trẻ."
+      },
+      "clientFocus": {
+        "title": "Tập trung khách hàng",
+        "description": "Kỹ năng giao tiếp mạnh mẽ và tận tâm với sự hài lòng của khách hàng."
+      }
+    }
+  },
+  "experience": {
+    "title": "Kinh nghiệm làm việc",
+    "subtitle": "Hành trình nghề nghiệp của tôi và các công ty tôi đã có đặc ân được làm việc cùng",
+    "present": "Hiện tại",
+    "months": "tháng",
+    "years": "năm",
+    "responsibilities": "Trách nhiệm chính",
+    "achievements": "Thành tựu chính",
+    "technologies": "Công nghệ & Kỹ năng",
+    "positions": {
+      "fullstack": "Lập trình viên Fullstack Web",
+      "seo": "Chuyên viên SEO Website & Huấn luyện viên chính",
+      "teamLeader": "Tổ trưởng quảng cáo nhân sự",
+      "marketing": "Chuyên viên Digital Marketing",
+      "teacher": "Giáo viên"
+    },
+    "descriptions": {
+      "fullstack": "Hiện đang làm việc với vai trò Lập trình viên Fullstack Web, kết hợp nền tảng giáo dục, kinh nghiệm marketing, kỹ năng quản lý và chuyên môn lập trình để tạo ra những sản phẩm công nghệ mang giá trị thực.",
+      "seo": "Đảm nhiệm vai trò Huấn luyện viên chính cho nhóm SEO và trợ lý cho chủ quản SEO. Chịu trách nhiệm đào tạo thành viên nhóm, giám sát hiệu quả công việc và phát hiện các hành vi gian lận trong quá trình tối ưu hóa website. Yêu cầu hiểu biết sâu về thuật toán tìm kiếm và phân tích logic.",
+      "teamLeader": "Lãnh đạo nhóm quảng cáo chịu trách nhiệm triển khai các chiến dịch truyền thông, tuyển dụng và đào tạo nhân sự mới. Phát triển kỹ năng lãnh đạo mạnh mẽ và tư duy tổ chức hiệu quả.",
+      "marketing": "Chuyển đổi từ giáo dục sang digital marketing, khám phá sức mạnh của công nghệ và tư duy chiến lược. Phát triển kỹ năng trong các kênh và chiến lược marketing kỹ thuật số.",
+      "teacher": "Bắt đầu sự nghiệp với vai trò giáo viên, phát triển kỹ năng giao tiếp, sự kiên nhẫn và tinh thần trách nhiệm cao trong việc hỗ trợ người khác phát triển. Nền tảng này đã có giá trị trong suốt hành trình nghề nghiệp.",
+      "1": "Hiện đang làm việc với vai trò Lập trình viên Fullstack Web, kết hợp nền tảng giáo dục, kinh nghiệm marketing, kỹ năng quản lý và chuyên môn lập trình để tạo ra những sản phẩm công nghệ mang giá trị thực.",
+      "2": "Đảm nhiệm vai trò Huấn luyện viên chính cho nhóm SEO và trợ lý cho chủ quản SEO. Chịu trách nhiệm đào tạo thành viên nhóm, giám sát hiệu quả công việc và phát hiện các hành vi gian lận trong quá trình tối ưu hóa website. Yêu cầu hiểu biết sâu về thuật toán tìm kiếm và phân tích logic.",
+      "3": "Lãnh đạo nhóm quảng cáo chịu trách nhiệm triển khai các chiến dịch truyền thông, tuyển dụng và đào tạo nhân sự mới. Phát triển kỹ năng lãnh đạo mạnh mẽ và tư duy tổ chức hiệu quả.",
+      "4": "Chuyển đổi từ giáo dục sang digital marketing, khám phá sức mạnh của công nghệ và tư duy chiến lược. Phát triển kỹ năng trong các kênh và chiến lược marketing kỹ thuật số.",
+      "5": "Bắt đầu sự nghiệp với vai trò giáo viên, phát triển kỹ năng giao tiếp, sự kiên nhẫn và tinh thần trách nhiệm cao trong việc hỗ trợ người khác phát triển. Nền tảng này đã có giá trị trong suốt hành trình nghề nghiệp."
+    }
+  },
+  "skills": {
+    "title": "Kỹ năng & Chuyên môn",
+    "subtitle": "Tổng quan toàn diện về khả năng kỹ thuật và chuyên môn của tôi",
+    "frontend": "Kỹ năng kỹ thuật",
+    "backend": "Tiếp thị số",
+    "database": "Cơ sở dữ liệu & ORM",
+    "devops": "DevOps & Công cụ",
+    "languages": "Ngôn ngữ lập trình",
+    "frameworks": "Framework & Thư viện",
+    "tools": "Kỹ năng mềm",
+    "whyChooseMe": "Tại sao chọn tôi?",
+    "technicalExcellence": "Xuất sắc kỹ thuật",
+    "technicalExcellenceDesc": "Chuyên môn đã được chứng minh trong các công nghệ web hiện đại và các thực hành tốt nhất",
+    "businessFocus": "Tập trung kinh doanh",
+    "businessFocusDesc": "Hiểu biết về các chiến lược tiếp thị số và tối ưu hóa ROI",
+    "continuousLearning": "Học hỏi liên tục",
+    "continuousLearningDesc": "Luôn cập nhật với các công nghệ và xu hướng mới nhất"
+  },
+  "projects": {
+    "title": "Dự án nổi bật",
+    "subtitle": "Triển lãm các công việc gần đây của tôi và các công nghệ tôi đã sử dụng để biến ý tưởng thành hiện thực",
+    "viewProject": "Xem demo",
+    "viewCode": "Mã nguồn",
+    "technologies": "Công nghệ",
+    "description": "Mô tả",
+    "features": "Tính năng chính",
+    "preview": "Xem trước dự án",
+    "interestedMore": "Quan tâm đến việc xem thêm?",
+    "interestedMoreDesc": "Tôi liên tục làm việc trên các dự án mới và cải thiện kỹ năng của mình. Hãy thảo luận về cách tôi có thể giúp với dự án tiếp theo của bạn.",
+    "startProject": "Bắt đầu dự án",
+    "todoList": {
+      "title": "Ứng dụng TodoList",
+      "description": "Một ứng dụng danh sách công việc hiện đại và responsive với đầy đủ chức năng CRUD, giao diện thân thiện người dùng và tính năng lưu trữ local. Bao gồm thêm, chỉnh sửa, xóa công việc, đánh dấu hoàn thành và tùy chọn lọc.",
+      "features": [
+        "Thêm, chỉnh sửa và xóa công việc",
+        "Đánh dấu công việc hoàn thành/chưa hoàn thành",
+        "Lọc công việc theo trạng thái",
+        "Lưu trữ dữ liệu local",
+        "Thiết kế responsive cho mọi thiết bị",
+        "Giao diện người dùng sạch sẽ và trực quan"
+      ]
+    },
+    "filmApp": {
+      "title": "Nền tảng Xem phim Trailer",
+      "description": "Một nền tảng phim hiện đại với trailer từ YouTube và các tính năng tương tác người dùng. Người dùng có thể duyệt phim, xem trailer, like/dislike, bình luận và quản lý nội dung với dashboard admin để kiểm duyệt.",
+      "features": [
+        "Duyệt và tìm kiếm phim",
+        "Xem trailer phim từ YouTube",
+        "Xác thực người dùng và hồ sơ",
+        "Hệ thống like, dislike và bình luận",
+        "Dashboard admin quản lý nội dung",
+        "Thiết kế responsive cho mọi thiết bị"
+      ]
+    }
+  },
+  "education": {
+    "title": "Học vấn & Chứng chỉ",
+    "subtitle": "Nền tảng học thuật và chứng chỉ chuyên môn của tôi",
+    "degree": "Bằng cấp",
+    "institution": "Trường học",
+    "graduation": "Năm tốt nghiệp",
+    "gpa": "Điểm trung bình",
+    "relevantCourses": "Môn học liên quan"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "subtitle": "Sẵn sàng bắt đầu một dự án hoặc có câu hỏi? Hãy nói chuyện!",
+    "description": "Tôi luôn quan tâm đến những cơ hội mới và các dự án thú vị. Dù bạn có câu hỏi hay chỉ muốn chào hỏi, tôi sẽ cố gắng hết sức để trả lời bạn!",
+    "letsConnect": "Hãy kết nối",
+    "form": {
+      "name": "Họ tên của bạn",
+      "email": "Email của bạn",
+      "subject": "Tiêu đề",
+      "message": "Nội dung tin nhắn",
+      "send": "Gửi tin nhắn",
+      "sending": "Đang gửi...",
+      "successMessage": "Cảm ơn bạn! Tin nhắn đã được gửi thành công. Tôi sẽ phản hồi sớm nhất có thể!",
+      "errorMessage": "Xin lỗi, có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại hoặc liên hệ trực tiếp qua email."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Điện thoại",
+      "location": "Địa chỉ",
+      "availability": "Tình trạng",
+      "zalo": "Zalo",
+      "telegram": "Telegram"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 LyHuuThanh. Tất cả quyền được bảo lưu.",
+    "madeWith": "Được tạo với ❤️ bằng React & Node.js",
+    "social": "Kết nối với tôi",
+    "quickLinks": "Liên kết nhanh"
+  },
+  "common": {
+    "downloadCV": "Tải CV",
+    "viewMore": "Xem thêm",
+    "viewLess": "Thu gọn",
+    "loading": "Đang tải...",
+    "loadingPortfolio": "Đang tải Portfolio...",
+    "error": "Đã xảy ra lỗi",
+    "retry": "Thử lại",
+    "language": "Ngôn ngữ",
+    "readyToWork": "Sẵn sàng làm việc cùng nhau?",
+    "letsTalk": "Hãy nói chuyện",
+    "letsDiscuss": "Hãy thảo luận về dự án của bạn và xem cách tôi có thể giúp biến ý tưởng của bạn thành hiện thực. Tôi luôn hào hứng khi nhận những thách thức mới và tạo ra các giải pháp sáng tạo."
+  }
+} 
