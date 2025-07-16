@@ -327,7 +327,7 @@
   }
 
   .hero-social {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .shape-1 {
@@ -698,7 +698,7 @@
   display: flex;
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .social-link {
