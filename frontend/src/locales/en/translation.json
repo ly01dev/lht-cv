@@ -154,6 +154,18 @@
         "Admin dashboard for content management",
         "Responsive design for all devices"
       ]
+    },
+    "portfolio": {
+      "title": "Portfolio/CV Website",
+      "description": "A professional and modern portfolio website built with React and Node.js. This website showcases comprehensive personal information, work experience, skills, and completed projects. Designed with responsive design and SEO optimization.",
+      "features": [
+        "Modern and responsive interface",
+        "Multi-language support (Vietnamese/English)",
+        "Smooth animations and transitions",
+        "Contact form integration with EmailJS",
+        "SEO and performance optimized",
+        "Deployed on GitHub Pages"
+      ]
     }
   },
   "education": {

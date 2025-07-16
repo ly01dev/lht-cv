@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import profileImage from '../assets/images/thanh-ly.png';
 import './Loading.css';
 
 const Loading = () => {
@@ -23,7 +24,7 @@ const Loading = () => {
             scale: { duration: 1, repeat: Infinity, ease: "easeInOut" }
           }}
         >
-          <img src="/images/thanh-ly.png" alt="Ly Huu Thanh" />
+          <img src={profileImage} alt="Ly Huu Thanh" />
         </motion.div>
         
         <motion.h2

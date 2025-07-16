@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
+import zaloQR from '../assets/images/zalo.jpg';
+import telegramQR from '../assets/images/tele.jpg';
 import './Hero.css';
 
 const Hero = () => {
@@ -167,7 +169,7 @@ const Hero = () => {
                 <div className="info-value-with-qr">
                   <span className="info-value">{t('hero.info.zaloValue')}</span>
                   <div className="qr-code-popup">
-                    <img src="/images/zalo.jpg" alt="Zalo QR Code" />
+                    <img src={zaloQR} alt="Zalo QR Code" />
                     <span>{t('hero.info.scanToConnect')}</span>
                   </div>
                 </div>
@@ -177,7 +179,7 @@ const Hero = () => {
                 <div className="info-value-with-qr">
                   <span className="info-value">{t('hero.info.telegramValue')}</span>
                   <div className="qr-code-popup">
-                    <img src="/images/tele.jpg" alt="Telegram QR Code" />
+                    <img src={telegramQR} alt="Telegram QR Code" />
                     <span>{t('hero.info.scanToConnect')}</span>
                   </div>
                 </div>
@@ -219,9 +221,13 @@ const Hero = () => {
           >
             <div className="profile-image-container">
               <img
-                src="/images/muadong.jpg"
+                src="./images/muadong.jpg"
                 alt={profile.name}
                 className="profile-image"
+                onError={(e) => {
+                  console.log('Image failed to load:', e.target.src);
+                  e.target.style.display = 'none';
+                }}
               />
               <div className="profile-image-border"></div>
             </div>

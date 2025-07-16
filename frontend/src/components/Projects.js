@@ -29,11 +29,12 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Portfolio Website',
-      description: 'Responsive portfolio website with modern design and smooth animations.',
-      technologies: ['React', 'Framer Motion', 'SCSS'],
-      link: 'https://github.com/yourusername/portfolio',
-      demo: 'https://your-portfolio.com'
+      title: t('projects.portfolio.title'),
+      description: t('projects.portfolio.description'),
+      technologies: ['React', 'Node.js', 'Framer Motion', 'i18next', 'EmailJS', 'GitHub Pages'],
+      link: 'https://github.com/ly01dev/lht-cv',
+      demo: 'https://ly01dev.github.io/lht-cv/',
+      features: t('projects.portfolio.features', { returnObjects: true })
     }
   ];
 

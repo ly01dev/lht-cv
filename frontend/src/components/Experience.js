@@ -10,27 +10,43 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      company: t('experience.companies.company1'),
-      position: t('experience.positions.position1'),
-      period: t('experience.periods.period1'),
-      description: t('experience.descriptions.description1'),
-      technologies: ['React', 'Node.js', 'AWS', 'Docker', 'MongoDB']
+      company: "Freelance",
+      position: t('experience.positions.fullstack'),
+      period: "05/2025 - " + t('experience.present'),
+      description: t('experience.descriptions.fullstack'),
+      technologies: ['React', 'Node.js', 'JavaScript', 'MongoDB', 'Express.js', 'HTML/CSS', 'Git']
     },
     {
       id: 2,
-      company: t('experience.companies.company2'),
-      position: t('experience.positions.position2'),
-      period: t('experience.periods.period2'),
-      description: t('experience.descriptions.description2'),
-      technologies: ['JavaScript', 'Python', 'SQL', 'Git', 'REST APIs']
+      company: "OKVIP (Taipei101)",
+      position: t('experience.positions.seo'),
+      period: "2022 - 05/2024",
+      description: t('experience.descriptions.seo'),
+      technologies: ['SEO', 'Google Analytics', 'Google Search Console', 'WordPress', 'Content Marketing', 'Data Analysis']
     },
     {
       id: 3,
-      company: t('experience.companies.company3'),
-      position: t('experience.positions.position3'),
-      period: t('experience.periods.period3'),
-      description: t('experience.descriptions.description3'),
-      technologies: ['HTML/CSS', 'JavaScript', 'PHP', 'MySQL', 'WordPress']
+      company: "Winner Company",
+      position: t('experience.positions.teamLeader'),
+      period: "2021 - 2022",
+      description: t('experience.descriptions.teamLeader'),
+      technologies: ['Team Leadership', 'Digital Marketing', 'Campaign Management', 'Recruitment', 'Training', 'Communication']
+    },
+    {
+      id: 4,
+      company: "Freelance",
+      position: t('experience.positions.marketing'),
+      period: "2020 - 2021",
+      description: t('experience.descriptions.marketing'),
+      technologies: ['Digital Marketing', 'Social Media Marketing', 'Content Creation', 'SEO', 'Google Ads', 'Facebook Ads']
+    },
+    {
+      id: 5,
+      company: "Education Sector",
+      position: t('experience.positions.teacher'),
+      period: "2019 - 2020",
+      description: t('experience.descriptions.teacher'),
+      technologies: ['Teaching', 'Communication', 'Curriculum Development', 'Student Assessment', 'Leadership', 'Patience']
     }
   ];
 

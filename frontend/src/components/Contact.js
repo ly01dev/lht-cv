@@ -85,14 +85,14 @@ const Contact = () => {
       title: t('contact.info.zalo'),
       value: t('hero.info.zaloValue'),
       link: null,
-      qrCode: '/images/zalo.jpg'
+      qrCode: 'assets/images/zalo.jpg'
     },
     {
       icon: <FaTelegram />,
       title: t('contact.info.telegram'),
       value: t('hero.info.telegramValue'),
       link: null,
-      qrCode: '/images/tele.jpg'
+      qrCode: 'assets/images/tele.jpg'
     }
   ];
 

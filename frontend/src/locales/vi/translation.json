@@ -164,6 +164,18 @@
         "Dashboard admin quản lý nội dung",
         "Thiết kế responsive cho mọi thiết bị"
       ]
+    },
+    "portfolio": {
+      "title": "Website Portfolio/CV",
+      "description": "Một website portfolio chuyên nghiệp và hiện đại được xây dựng với React và Node.js. Website này giới thiệu đầy đủ thông tin cá nhân, kinh nghiệm làm việc, kỹ năng và các dự án đã thực hiện. Được thiết kế responsive và tối ưu SEO.",
+      "features": [
+        "Giao diện hiện đại và responsive",
+        "Đa ngôn ngữ (Tiếng Việt/English)",
+        "Hiệu ứng animation mượt mà",
+        "Tích hợp form liên hệ với EmailJS",
+        "Tối ưu SEO và performance",
+        "Deploy trên GitHub Pages"
+      ]
     }
   },
   "education": {
