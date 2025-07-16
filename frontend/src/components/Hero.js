@@ -177,7 +177,7 @@ const Hero = () => {
                 <div className="info-value-with-qr">
                   <span className="info-value">{t('hero.info.telegramValue')}</span>
                   <div className="qr-code-popup">
-                    <img src="/images/telegram.jpg" alt="Telegram QR Code" />
+                    <img src="/images/tele.jpg" alt="Telegram QR Code" />
                     <span>{t('hero.info.scanToConnect')}</span>
                   </div>
                 </div>
@@ -219,7 +219,7 @@ const Hero = () => {
           >
             <div className="profile-image-container">
               <img
-                src="/images/thanh-ly.png"
+                src="/images/muadong.jpg"
                 alt={profile.name}
                 className="profile-image"
               />
