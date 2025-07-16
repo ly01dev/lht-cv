@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaArrowDown, FaWhatsapp, FaTelegram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaArrowDown } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
