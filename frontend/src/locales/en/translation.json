@@ -169,13 +169,33 @@
     }
   },
   "education": {
-    "title": "Education",
-    "subtitle": "My academic background",
+    "title": "Education & Certifications",
+    "subtitle": "My academic background and professional certifications",
     "degree": "Degree",
     "institution": "Institution",
     "graduation": "Graduation Year",
     "gpa": "GPA",
-    "relevantCourses": "Relevant Courses"
+    "relevantCourses": "Relevant Courses",
+    "degrees": {
+      "music": "Bachelor of Music Education",
+      "digital": "Digital Marketing Certificate",
+      "fullstack": "Full Stack Web Developer Certificate"
+    },
+    "schools": {
+      "music": "Saigon University",
+      "digital": "ENS Marketing Training Company",
+      "fullstack": "Pantech Company"
+    },
+    "periods": {
+      "music": "2008 - 2012",
+      "digital": "2019",
+      "fullstack": "April 2025"
+    },
+    "descriptions": {
+      "music": "Graduated with a degree in Music Education, trained in music teaching methods, music theory, and performance skills. This educational foundation helped me develop communication skills, patience, and effective knowledge transfer abilities.",
+      "digital": "Completed an intensive Digital Marketing course covering SEO, SEM, Social Media Marketing, and Content Marketing. This certification opened the door to a career in digital marketing.",
+      "fullstack": "Completed Full Stack Web Developer course at Pantech, covering React, Node.js, MongoDB and modern web technologies. This certification equipped me with comprehensive knowledge of full stack web development."
+    }
   },
   "contact": {
     "title": "Get In Touch",

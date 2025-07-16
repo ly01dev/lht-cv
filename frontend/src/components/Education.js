@@ -10,17 +10,24 @@ const Education = () => {
   const education = [
     {
       id: 1,
-      degree: t('education.degrees.degree1'),
-      school: t('education.schools.school1'),
-      period: t('education.periods.period1'),
-      description: t('education.descriptions.description1')
+      degree: t('education.degrees.music'),
+      school: t('education.schools.music'),
+      period: t('education.periods.music'),
+      description: t('education.descriptions.music')
     },
     {
       id: 2,
-      degree: t('education.degrees.degree2'),
-      school: t('education.schools.school2'),
-      period: t('education.periods.period2'),
-      description: t('education.descriptions.description2')
+      degree: t('education.degrees.digital'),
+      school: t('education.schools.digital'),
+      period: t('education.periods.digital'),
+      description: t('education.descriptions.digital')
+    },
+    {
+      id: 3,
+      degree: t('education.degrees.fullstack'),
+      school: t('education.schools.fullstack'),
+      period: t('education.periods.fullstack'),
+      description: t('education.descriptions.fullstack')
     }
   ];
 

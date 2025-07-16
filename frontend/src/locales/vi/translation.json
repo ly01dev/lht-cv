@@ -185,7 +185,27 @@
     "institution": "Trường học",
     "graduation": "Năm tốt nghiệp",
     "gpa": "Điểm trung bình",
-    "relevantCourses": "Môn học liên quan"
+    "relevantCourses": "Môn học liên quan",
+    "degrees": {
+      "music": "Cử nhân Sư phạm Âm nhạc",
+      "digital": "Chứng chỉ Digital Marketing",
+      "fullstack": "Chứng chỉ Full Stack Web Developer"
+    },
+    "schools": {
+      "music": "Trường Đại học Sài Gòn",
+      "digital": "Công ty Đào tạo Marketing ENS",
+      "fullstack": "Công ty Pantech"
+    },
+    "periods": {
+      "music": "2008 - 2012",
+      "digital": "2019",
+      "fullstack": "Tháng 4/2025"
+    },
+    "descriptions": {
+      "music": "Tốt nghiệp chuyên ngành Sư phạm Âm nhạc, được đào tạo về phương pháp giảng dạy âm nhạc, lý thuyết âm nhạc và kỹ năng biểu diễn. Nền tảng giáo dục này đã giúp tôi phát triển kỹ năng giao tiếp, sự kiên nhẫn và khả năng truyền đạt kiến thức hiệu quả.",
+      "digital": "Hoàn thành khóa học Digital Marketing chuyên sâu, bao gồm SEO, SEM, Social Media Marketing và Content Marketing. Chứng chỉ này đã mở ra cánh cửa cho sự nghiệp trong lĩnh vực marketing kỹ thuật số.",
+      "fullstack": "Hoàn thành khóa học Full Stack Web Developer tại Pantech, bao gồm React, Node.js, MongoDB và các công nghệ web hiện đại. Chứng chỉ này đã trang bị cho tôi kiến thức toàn diện về phát triển web full stack."
+    }
   },
   "contact": {
     "title": "Liên hệ",

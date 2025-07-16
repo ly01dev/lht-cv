@@ -520,6 +520,10 @@
     font-size: 1rem;
   }
 
+  .hero-social {
+    justify-content: center;
+  }
+
   .hero-info {
     gap: var(--spacing-xs);
   }
@@ -694,7 +698,7 @@
   display: flex;
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .social-link {
