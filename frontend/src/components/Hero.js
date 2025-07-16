@@ -186,6 +186,27 @@ const Hero = () => {
               </div>
             </motion.div>
 
+          </motion.div>
+
+          <motion.div
+            className="hero-image"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="profile-image-container">
+              <img
+                src="./images/muadong.jpg"
+                alt={profile.name}
+                className="profile-image"
+                onError={(e) => {
+                  console.log('Image failed to load:', e.target.src);
+                  e.target.style.display = 'none';
+                }}
+              />
+              <div className="profile-image-border"></div>
+            </div>
+            
             <motion.div
               className="hero-social"
               initial={{ opacity: 0, y: 30 }}
@@ -211,26 +232,6 @@ const Hero = () => {
                 <FaGithub />
               </a>
             </motion.div>
-          </motion.div>
-
-          <motion.div
-            className="hero-image"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="profile-image-container">
-              <img
-                src="./images/muadong.jpg"
-                alt={profile.name}
-                className="profile-image"
-                onError={(e) => {
-                  console.log('Image failed to load:', e.target.src);
-                  e.target.style.display = 'none';
-                }}
-              />
-              <div className="profile-image-border"></div>
-            </div>
           </motion.div>
         </div>
 
