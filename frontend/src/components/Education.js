@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaGraduationCap, FaCalendar, FaMapMarkerAlt } from 'react-icons/fa';
@@ -6,30 +6,23 @@ import './Education.css';
 
 const Education = () => {
   const { t } = useTranslation();
-  const [education, setEducation] = useState([]);
 
-  useEffect(() => {
-    const fetchEducation = async () => {
-      try {
-        const response = await fetch('/api/education');
-        const data = await response.json();
-        setEducation(data);
-      } catch (error) {
-        console.error('Error fetching education:', error);
-        setEducation([
-          {
-            id: 1,
-            degree: 'Bachelor of Computer Science',
-            school: 'University of Technology',
-            period: '2014 - 2018',
-            description: 'Specialized in Software Engineering and Web Development'
-          }
-        ]);
-      }
-    };
-
-    fetchEducation();
-  }, []);
+  const education = [
+    {
+      id: 1,
+      degree: t('education.degrees.degree1'),
+      school: t('education.schools.school1'),
+      period: t('education.periods.period1'),
+      description: t('education.descriptions.description1')
+    },
+    {
+      id: 2,
+      degree: t('education.degrees.degree2'),
+      school: t('education.schools.school2'),
+      period: t('education.periods.period2'),
+      description: t('education.descriptions.description2')
+    }
+  ];
 
   return (
     <section id="education" className="education">

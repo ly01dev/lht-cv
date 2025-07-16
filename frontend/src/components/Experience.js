@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaBriefcase, FaCalendar } from 'react-icons/fa';
@@ -6,31 +6,33 @@ import './Experience.css';
 
 const Experience = () => {
   const { t } = useTranslation();
-  const [experiences, setExperiences] = useState([]);
 
-  useEffect(() => {
-    const fetchExperiences = async () => {
-      try {
-        const response = await fetch('/api/experience');
-        const data = await response.json();
-        setExperiences(data);
-      } catch (error) {
-        console.error('Error fetching experiences:', error);
-        setExperiences([
-          {
-            id: 1,
-            company: 'Tech Company ABC',
-            position: 'Senior Full Stack Developer',
-            period: '2022 - Present',
-            description: 'Led development of enterprise web applications using React, Node.js, and cloud technologies.',
-            technologies: ['React', 'Node.js', 'AWS', 'Docker', 'MongoDB']
-          }
-        ]);
-      }
-    };
-
-    fetchExperiences();
-  }, []);
+  const experiences = [
+    {
+      id: 1,
+      company: t('experience.companies.company1'),
+      position: t('experience.positions.position1'),
+      period: t('experience.periods.period1'),
+      description: t('experience.descriptions.description1'),
+      technologies: ['React', 'Node.js', 'AWS', 'Docker', 'MongoDB']
+    },
+    {
+      id: 2,
+      company: t('experience.companies.company2'),
+      position: t('experience.positions.position2'),
+      period: t('experience.periods.period2'),
+      description: t('experience.descriptions.description2'),
+      technologies: ['JavaScript', 'Python', 'SQL', 'Git', 'REST APIs']
+    },
+    {
+      id: 3,
+      company: t('experience.companies.company3'),
+      position: t('experience.positions.position3'),
+      period: t('experience.periods.period3'),
+      description: t('experience.descriptions.description3'),
+      technologies: ['HTML/CSS', 'JavaScript', 'PHP', 'MySQL', 'WordPress']
+    }
+  ];
 
   return (
     <section id="experience" className="experience">
@@ -71,7 +73,7 @@ const Experience = () => {
                   </div>
                 </div>
                 
-                <p className="description">{t(`experience.descriptions.${exp.id}`)}</p>
+                <p className="description">{exp.description}</p>
                 
                 <div className="technologies">
                   <h4>{t('experience.technologies')}:</h4>
