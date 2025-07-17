@@ -1,19 +1,20 @@
 {
-  "short_name": "CV Portfolio",
-  "name": "Professional CV Portfolio",
+  "short_name": "Ly Huu Thanh CV",
+  "name": "Ly Huu Thanh - Full Stack Developer & Digital Marketing Specialist",
+  "description": "Portfolio chuyên nghiệp của Ly Huu Thanh - Lập trình viên Full Stack với kinh nghiệm Digital Marketing",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "./images/thanh-ly.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
+      "src": "./images/thanh-ly.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "./images/thanh-ly.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -21,5 +22,9 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#2563eb",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "education"],
+  "lang": "vi",
+  "dir": "ltr"
 } 

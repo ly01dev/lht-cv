@@ -30,7 +30,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero" role="banner" aria-labelledby="hero-title">
       <div className="hero-background">
         <div className="hero-shapes">
           <motion.div
@@ -81,6 +81,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <motion.h1
+              id="hero-title"
               className="hero-title"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

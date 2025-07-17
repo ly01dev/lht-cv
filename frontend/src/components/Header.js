@@ -43,6 +43,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
+      role="banner"
     >
       <div className="container">
         <div className="header-content">
@@ -56,19 +57,22 @@ const Header = ({ darkMode, toggleDarkMode }) => {
             </a>
           </motion.div>
 
-          <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-            <ul className="nav-list">
+          <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`} role="navigation" aria-label="Main navigation">
+            <ul className="nav-list" role="menubar">
               {navItems.map((item, index) => (
                 <motion.li
                   key={item.name}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
+                  role="none"
                 >
                   <a
                     href={item.href}
                     onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
                     className="nav-link"
+                    role="menuitem"
+                    aria-label={`Navigate to ${item.name} section`}
                   >
                     {item.name}
                   </a>
