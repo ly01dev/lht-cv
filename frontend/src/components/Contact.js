@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaWhatsapp, FaTelegram } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
+import zaloQR from '../assets/images/zalo.jpg';
+import telegramQR from '../assets/images/tele.jpg';
 import './Contact.css';
 
 const Contact = () => {
@@ -85,14 +87,14 @@ const Contact = () => {
       title: t('contact.info.zalo'),
       value: t('hero.info.zaloValue'),
       link: null,
-      qrCode: 'assets/images/zalo.jpg'
+      qrCode: zaloQR
     },
     {
       icon: <FaTelegram />,
       title: t('contact.info.telegram'),
       value: t('hero.info.telegramValue'),
       link: null,
-      qrCode: 'assets/images/tele.jpg'
+      qrCode: telegramQR
     }
   ];
 
