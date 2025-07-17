@@ -1,600 +1,285 @@
-# Giải Thích Chi Tiết Code - Website CV
+# 📚 HƯỚNG DẪN CODE WEBSITE CV - CHO NGƯỜI MỚI HỌC
 
-## 📁 Cấu Trúc Dự Án
+## 🎯 **MỤC TIÊU**
 
-### Backend (Node.js + Express)
+File này giải thích cấu trúc và quy trình hoạt động của website CV để bạn dễ hiểu và học hỏi.
 
-#### `backend/server.js` - File Chính Của Server
+## 📁 **CẤU TRÚC THƯ MỤC**
 
-```javascript
-// Import các thư viện cần thiết
-const express = require("express"); // Framework web Express
-const cors = require("cors"); // Cho phép truy cập từ domain khác
-const helmet = require("helmet"); // Bảo mật cho ứng dụng
-const compression = require("compression"); // Nén dữ liệu để tăng tốc độ
-
-const app = express(); // Tạo ứng dụng Express
-const PORT = process.env.PORT || 5000; // Port mặc định là 5000
-
-// Middleware - Các phần mềm trung gian
-app.use(helmet()); // Bảo mật headers
-app.use(compression()); // Nén response
-app.use(cors()); // Cho phép CORS
-app.use(express.json()); // Parse JSON data
-
-// API Routes - Các đường dẫn API
-app.get("/api/profile", (req, res) => {
-  // Trả về thông tin cá nhân dưới dạng JSON
-  res.json({
-    name: "Your Name", // Tên của bạn
-    title: "Full Stack Developer...", // Chức danh
-    email: "your.email@example.com", // Email
-    phone: "+84 123 456 789", // Số điện thoại
-    location: "Ho Chi Minh City, Vietnam", // Địa chỉ
-    about: "Passionate developer...", // Mô tả về bản thân
-    social: {
-      // Liên kết mạng xã hội
-      linkedin: "https://linkedin.com/in/yourprofile",
-      github: "https://github.com/yourusername",
-      twitter: "https://twitter.com/yourhandle",
-      facebook: "https://facebook.com/yourprofile",
-    },
-  });
-});
-
-// Khởi động server
-app.listen(PORT, () => {
-  console.log(`Server đang chạy trên port ${PORT}`);
-  console.log(`API URL: http://localhost:${PORT}/api`);
-});
+```
+frontend/
+├── src/
+│   ├── App.js              # 🏠 FILE CHÍNH - Khởi động ứng dụng
+│   ├── index.js            # 🚀 Điểm khởi đầu React
+│   ├── index.css           # 🎨 CSS toàn cục và biến màu sắc
+│   ├── App.css             # 🎨 CSS cho App component
+│   ├── i18n.js             # 🌐 Cấu hình đa ngôn ngữ
+│   ├── components/         # 🧩 Các thành phần giao diện
+│   │   ├── Header.js       # 📱 Thanh điều hướng
+│   │   ├── Hero.js         # 🎭 Phần giới thiệu chính
+│   │   ├── About.js        # 👤 Thông tin về tôi
+│   │   ├── Experience.js   # 💼 Kinh nghiệm làm việc
+│   │   ├── Skills.js       # 🛠️ Kỹ năng
+│   │   ├── Projects.js     # 📂 Dự án
+│   │   ├── Education.js    # 🎓 Học vấn
+│   │   ├── Contact.js      # 📞 Liên hệ
+│   │   ├── Footer.js       # 🦶 Chân trang
+│   │   └── Loading.js      # ⏳ Màn hình chờ
+│   └── locales/            # 🌍 Nội dung đa ngôn ngữ
+│       ├── en/             # 🇺🇸 Tiếng Anh
+│       └── vi/             # 🇻🇳 Tiếng Việt
 ```
 
-### Frontend (React)
+## 🔄 **QUY TRÌNH HOẠT ĐỘNG**
 
-#### `frontend/src/App.js` - Component Chính
+### **BƯỚC 1: Khởi động ứng dụng**
 
-```javascript
-import React, { useState, useEffect } from "react"; // Import React hooks
-import { motion, AnimatePresence } from "framer-motion"; // Import animation
-import Header from "./components/Header"; // Import component Header
-import Hero from "./components/Hero"; // Import component Hero
-// ... các import khác
+1. **index.js** → Khởi động React
+2. **App.js** → Component chính được render
+3. **Loading** → Hiển thị màn hình chờ (2 giây)
 
-function App() {
-  const [loading, setLoading] = useState(true); // State cho loading
-  const [darkMode, setDarkMode] = useState(false); // State cho dark mode
+### **BƯỚC 2: Tải cấu hình**
 
-  useEffect(() => {
-    // Simulate loading time - Giả lập thời gian loading
-    const timer = setTimeout(() => {
-      setLoading(false); // Tắt loading sau 2 giây
-    }, 2000);
+1. **i18n.js** → Cấu hình đa ngôn ngữ
+2. **index.css** → Tải CSS toàn cục
+3. **App.css** → Tải CSS cho App
 
-    return () => clearTimeout(timer); // Cleanup timer
-  }, []);
+### **BƯỚC 3: Hiển thị giao diện**
 
-  useEffect(() => {
-    // Check for saved dark mode preference - Kiểm tra cài đặt dark mode đã lưu
-    const savedDarkMode = localStorage.getItem("darkMode");
-    if (savedDarkMode) {
-      setDarkMode(JSON.parse(savedDarkMode)); // Khôi phục cài đặt
-    }
-  }, []);
+1. **Header** → Thanh điều hướng (cố định)
+2. **Hero** → Phần giới thiệu chính
+3. **About** → Thông tin cá nhân
+4. **Experience** → Kinh nghiệm làm việc
+5. **Skills** → Kỹ năng và chuyên môn
+6. **Projects** → Các dự án đã làm
+7. **Education** → Học vấn và chứng chỉ
+8. **Contact** → Form liên hệ
+9. **Footer** → Chân trang
 
-  useEffect(() => {
-    // Save dark mode preference - Lưu cài đặt dark mode
-    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+## 🧩 **GIẢI THÍCH TỪNG COMPONENT**
 
-    // Apply dark mode class to body - Áp dụng class dark mode
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [darkMode]);
+### **1. App.js - Component Chính**
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode); // Chuyển đổi dark mode
-  };
+- **Chức năng**: Quản lý toàn bộ ứng dụng
+- **Quản lý**: Loading, Dark Mode, Animation
+- **Render**: Tất cả các component con
 
-  if (loading) {
-    return <Loading />; // Hiển thị loading
-  }
+### **2. Header.js - Thanh Điều Hướng**
 
-  return (
-    <div className={`App ${darkMode ? "dark" : ""}`}>
-      <AnimatePresence>
-        <motion.div
-          initial={{ opacity: 0 }} // Trạng thái ban đầu
-          animate={{ opacity: 1 }} // Trạng thái sau animation
-          transition={{ duration: 0.5 }} // Thời gian animation
-        >
-          <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+- **Chức năng**: Menu navigation, chuyển đổi ngôn ngữ, dark mode
+- **Tính năng**: Responsive, smooth scroll, mobile menu
 
-          <main>
-            <Hero />
-            <About />
-            <Experience />
-            <Skills />
-            <Projects />
-            <Education />
-            <Contact />
-          </main>
+### **3. Hero.js - Phần Giới Thiệu**
 
-          <Footer />
-        </motion.div>
-      </AnimatePresence>
-    </div>
-  );
-}
-```
+- **Chức năng**: Giới thiệu cá nhân, ảnh profile, social links
+- **Tính năng**: Animation, QR code popup, call-to-action buttons
 
-#### `frontend/src/components/Header.js` - Component Header
+### **4. About.js - Thông Tin Cá Nhân**
 
-```javascript
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion"; // Import animation
-import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa"; // Import icons
+- **Chức năng**: Mô tả chi tiết về bản thân, thống kê, đặc điểm
+- **Tính năng**: Animated stats, feature cards
 
-const Header = ({ darkMode, toggleDarkMode }) => {
-  const [isScrolled, setIsScrolled] = useState(false); // State cho scroll
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State cho mobile menu
+### **5. Experience.js - Kinh Nghiệm**
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50); // Kiểm tra scroll > 50px
-    };
+- **Chức năng**: Timeline kinh nghiệm làm việc
+- **Tính năng**: Timeline animation, responsive design
 
-    window.addEventListener("scroll", handleScroll); // Thêm event listener
-    return () => window.removeEventListener("scroll", handleScroll); // Cleanup
-  }, []);
+### **6. Skills.js - Kỹ Năng**
 
-  const navItems = [
-    // Danh sách menu
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ];
+- **Chức năng**: Hiển thị kỹ năng với progress bars
+- **Tính năng**: Animated progress bars, skill categories
 
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href); // Tìm element
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" }); // Scroll mượt đến section
-    }
-    setIsMobileMenuOpen(false); // Đóng mobile menu
-  };
+### **7. Projects.js - Dự Án**
 
-  return (
-    <motion.header
-      className={`header ${isScrolled ? "scrolled" : ""}`}
-      initial={{ y: -100 }} // Ban đầu ở trên cùng
-      animate={{ y: 0 }} // Di chuyển xuống vị trí
-      transition={{ duration: 0.5 }} // Thời gian animation
-    >
-      <div className="container">
-        <div className="header-content">
-          <motion.div
-            className="logo"
-            whileHover={{ scale: 1.05 }} // Phóng to khi hover
-            whileTap={{ scale: 0.95 }} // Thu nhỏ khi click
-          >
-            <a
-              href="#home"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("#home");
-              }}
-            >
-              <span className="gradient-text">YourName</span>
-            </a>
-          </motion.div>
+- **Chức năng**: Showcase các dự án đã làm
+- **Tính năng**: Project cards, hover effects, external links
 
-          <nav className={`nav ${isMobileMenuOpen ? "mobile-open" : ""}`}>
-            <ul className="nav-list">
-              {navItems.map((item, index) => (
-                <motion.li
-                  key={item.name}
-                  initial={{ opacity: 0, y: -20 }} // Ban đầu ẩn và ở trên
-                  animate={{ opacity: 1, y: 0 }} // Hiện và di chuyển xuống
-                  transition={{ delay: index * 0.1 }} // Delay tăng dần
-                >
-                  <a
-                    href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection(item.href);
-                    }}
-                    className="nav-link"
-                  >
-                    {item.name}
-                  </a>
-                </motion.li>
-              ))}
-            </ul>
-          </nav>
+### **8. Education.js - Học Vấn**
 
-          <div className="header-actions">
-            <motion.button
-              className="theme-toggle"
-              onClick={toggleDarkMode}
-              whileHover={{ scale: 1.1 }} // Phóng to khi hover
-              whileTap={{ scale: 0.9 }} // Thu nhỏ khi click
-              aria-label="Toggle dark mode"
-            >
-              {darkMode ? <FaSun /> : <FaMoon />} // Icon thay đổi theo mode
-            </motion.button>
+- **Chức năng**: Thông tin học vấn và chứng chỉ
+- **Tính năng**: Education cards, responsive layout
 
-            <motion.button
-              className="mobile-menu-toggle"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              whileTap={{ scale: 0.9 }}
-              aria-label="Toggle mobile menu"
-            >
-              {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-            </motion.button>
-          </div>
-        </div>
-      </div>
-    </motion.header>
-  );
-};
-```
+### **9. Contact.js - Liên Hệ**
 
-#### `frontend/src/components/Hero.js` - Component Hero
+- **Chức năng**: Form liên hệ và thông tin contact
+- **Tính năng**: EmailJS integration, QR code popup, form validation
 
-```javascript
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaTwitter,
-  FaFacebook,
-  FaArrowDown,
-} from "react-icons/fa";
+### **10. Footer.js - Chân Trang**
 
-const Hero = () => {
-  const [profile, setProfile] = useState(null); // State cho profile data
+- **Chức năng**: Social links, quick navigation, copyright
+- **Tính năng**: Social icons, responsive layout
 
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const response = await fetch("/api/profile"); // Gọi API
-        const data = await response.json(); // Parse JSON
-        setProfile(data); // Cập nhật state
-      } catch (error) {
-        console.error("Error fetching profile:", error);
-        // Fallback data - Dữ liệu dự phòng
-        setProfile({
-          name: "Your Name",
-          title: "Full Stack Developer & Digital Marketing Specialist",
-          // ... các thông tin khác
-        });
-      }
-    };
+## 🎨 **HỆ THỐNG CSS**
 
-    fetchProfile(); // Gọi function
-  }, []);
-
-  const scrollToAbout = () => {
-    const aboutSection = document.querySelector("#about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  if (!profile) {
-    return <div className="hero-loading">Loading...</div>; // Loading state
-  }
-
-  return (
-    <section id="home" className="hero">
-      <div className="hero-background">
-        <div className="hero-shapes">
-          <motion.div
-            className="shape shape-1"
-            animate={{
-              y: [0, -20, 0], // Di chuyển lên xuống
-              rotate: [0, 5, 0], // Xoay nhẹ
-            }}
-            transition={{
-              duration: 6, // Thời gian 6 giây
-              repeat: Infinity, // Lặp vô hạn
-              ease: "easeInOut", // Kiểu animation
-            }}
-          />
-          {/* Các shape khác tương tự */}
-        </div>
-      </div>
-
-      <div className="container">
-        <div className="hero-content">
-          <motion.div
-            className="hero-text"
-            initial={{ opacity: 0, y: 50 }} // Ban đầu ẩn và ở dưới
-            animate={{ opacity: 1, y: 0 }} // Hiện và di chuyển lên
-            transition={{ duration: 0.8, delay: 0.2 }} // Animation với delay
-          >
-            <motion.h1
-              className="hero-title"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Hi, I'm <span className="gradient-text">{profile.name}</span>
-            </motion.h1>
-
-            <motion.h2
-              className="hero-subtitle"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              {profile.title}
-            </motion.h2>
-
-            <motion.p
-              className="hero-description"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
-              {profile.about}
-            </motion.p>
-
-            <motion.div
-              className="hero-actions"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-            >
-              <motion.a
-                href="#contact"
-                className="btn btn-primary"
-                whileHover={{ scale: 1.05 }} // Phóng to khi hover
-                whileTap={{ scale: 0.95 }} // Thu nhỏ khi click
-                onClick={(e) => {
-                  e.preventDefault();
-                  const contactSection = document.querySelector("#contact");
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-              >
-                Get In Touch
-              </motion.a>
-
-              <motion.a
-                href="#projects"
-                className="btn btn-outline"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  const projectsSection = document.querySelector("#projects");
-                  if (projectsSection) {
-                    projectsSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-              >
-                View My Work
-              </motion.a>
-            </motion.div>
-
-            <motion.div
-              className="hero-info"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-            >
-              <div className="info-item">
-                <span className="info-label">Location:</span>
-                <span className="info-value">{profile.location}</span>
-              </div>
-              <div className="info-item">
-                <span className="info-label">Email:</span>
-                <a href={`mailto:${profile.email}`} className="info-value">
-                  {profile.email}
-                </a>
-              </div>
-              <div className="info-item">
-                <span className="info-label">Phone:</span>
-                <a href={`tel:${profile.phone}`} className="info-value">
-                  {profile.phone}
-                </a>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            className="hero-visual"
-            initial={{ opacity: 0, x: 50 }} // Ban đầu ẩn và ở bên phải
-            animate={{ opacity: 1, x: 0 }} // Hiện và di chuyển vào giữa
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="hero-avatar">
-              <div className="avatar-placeholder">
-                <span>👨‍💻</span> // Emoji placeholder
-              </div>
-            </div>
-
-            <motion.div
-              className="social-links"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 1.4 }}
-            >
-              <motion.a
-                href={profile.social.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-link"
-                whileHover={{ scale: 1.2, y: -5 }} // Phóng to và di chuyển lên
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaGithub />
-              </motion.a>
-              {/* Các social link khác tương tự */}
-            </motion.div>
-          </motion.div>
-        </div>
-
-        <motion.div
-          className="scroll-indicator"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
-        >
-          <motion.button
-            className="scroll-button"
-            onClick={scrollToAbout}
-            animate={{ y: [0, 10, 0] }} // Di chuyển lên xuống liên tục
-            transition={{ duration: 2, repeat: Infinity }}
-            whileHover={{ scale: 1.1 }}
-          >
-            <FaArrowDown />
-            <span>Scroll Down</span>
-          </motion.button>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-```
-
-## 🎨 CSS Variables (Biến CSS)
-
-#### `frontend/src/index.css` - CSS Toàn Cục
+### **CSS Variables (Biến CSS)**
 
 ```css
 :root {
-  /* Colors - Màu sắc */
-  --primary-color: #2563eb; /* Màu chính - xanh dương */
-  --primary-dark: #1d4ed8; /* Màu chính tối hơn */
-  --secondary-color: #f59e0b; /* Màu phụ - cam */
-  --accent-color: #10b981; /* Màu nhấn - xanh lá */
-  --text-primary: #1f2937; /* Màu chữ chính - xám đậm */
-  --text-secondary: #6b7280; /* Màu chữ phụ - xám nhạt */
-  --text-light: #9ca3af; /* Màu chữ nhạt - xám rất nhạt */
-  --bg-primary: #ffffff; /* Màu nền chính - trắng */
-  --bg-secondary: #f9fafb; /* Màu nền phụ - xám rất nhạt */
-  --bg-dark: #111827; /* Màu nền tối - đen */
-  --border-color: #e5e7eb; /* Màu viền - xám nhạt */
-
-  /* Shadows - Bóng đổ */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* Bóng nhỏ */
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1); /* Bóng vừa */
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1); /* Bóng lớn */
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1); /* Bóng rất lớn */
-
-  /* Typography - Typography */
-  --font-primary: "Inter", sans-serif; /* Font chính */
-  --font-heading: "Poppins", sans-serif; /* Font tiêu đề */
-
-  /* Spacing - Khoảng cách */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-sm: 0.5rem; /* 8px */
-  --spacing-md: 1rem; /* 16px */
-  --spacing-lg: 1.5rem; /* 24px */
-  --spacing-xl: 2rem; /* 32px */
-  --spacing-2xl: 3rem; /* 48px */
-  --spacing-3xl: 4rem; /* 64px */
-
-  /* Border Radius - Bo góc */
-  --radius-sm: 0.25rem; /* 4px */
-  --radius-md: 0.5rem; /* 8px */
-  --radius-lg: 0.75rem; /* 12px */
-  --radius-xl: 1rem; /* 16px */
-  --radius-2xl: 1.5rem; /* 24px */
-
-  /* Transitions - Chuyển động */
-  --transition-fast: 0.15s ease-in-out; /* Chuyển động nhanh */
-  --transition-normal: 0.3s ease-in-out; /* Chuyển động bình thường */
-  --transition-slow: 0.5s ease-in-out; /* Chuyển động chậm */
+  --primary-color: #2563eb; /* Màu chính */
+  --secondary-color: #f59e0b; /* Màu phụ */
+  --accent-color: #10b981; /* Màu nhấn */
+  --text-primary: #1f2937; /* Màu chữ chính */
+  --bg-primary: #ffffff; /* Màu nền chính */
 }
+```
 
-/* Dark Mode - Chế độ tối */
-.App.dark {
-  --bg-primary: #111827; /* Nền chính tối */
-  --bg-secondary: #1f2937; /* Nền phụ tối */
-  --text-primary: #f9fafb; /* Chữ chính sáng */
-  --text-secondary: #d1d5db; /* Chữ phụ sáng */
-  --text-light: #9ca3af; /* Chữ nhạt */
-  --border-color: #374151; /* Viền tối */
-}
+### **Responsive Breakpoints**
 
-/* Global Reset - Reset toàn cầu */
-* {
-  margin: 0; /* Xóa margin */
-  padding: 0; /* Xóa padding */
-  box-sizing: border-box; /* Box model */
-}
+- **Desktop**: > 1024px
+- **Tablet**: 768px - 1024px
+- **Mobile**: < 768px
+- **Small Mobile**: < 480px
 
-body {
-  font-family: var(--font-primary); /* Font chính */
-  line-height: 1.6; /* Chiều cao dòng */
-  color: var(--text-primary); /* Màu chữ chính */
-  background-color: var(--bg-primary); /* Màu nền chính */
-  -webkit-font-smoothing: antialiased; /* Làm mịn font */
-  -moz-osx-font-smoothing: grayscale; /* Làm mịn font */
-}
+## 🌐 **HỆ THỐNG ĐA NGÔN NGỮ**
 
-/* Utility Classes - Lớp tiện ích */
-.container {
-  max-width: 1200px; /* Chiều rộng tối đa */
-  margin: 0 auto; /* Căn giữa */
-  padding: 0 var(--spacing-md); /* Padding hai bên */
-}
+### **Cấu trúc Translation**
 
-.text-center {
-  text-align: center;
-} /* Căn giữa text */
-.text-left {
-  text-align: left;
-} /* Căn trái text */
-.text-right {
-  text-align: right;
-} /* Căn phải text */
-
-/* Responsive - Đáp ứng */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 var(--spacing-sm); /* Giảm padding trên mobile */
+```json
+{
+  "hero": {
+    "greeting": "Xin chào, tôi là",
+    "name": "Ly Huu Thanh",
+    "title": "Lập trình viên Full Stack"
   }
 }
 ```
 
-## 🔧 Cách Hoạt Động
+### **Cách sử dụng**
 
-### 1. Khởi Động Dự Án
-
-```bash
-npm run dev                    # Chạy cả backend và frontend
-npm run backend               # Chỉ chạy backend
-npm run frontend              # Chỉ chạy frontend
+```javascript
+const { t } = useTranslation();
+t("hero.greeting"); // → "Xin chào, tôi là"
 ```
 
-### 2. Luồng Dữ Liệu
+## 🚀 **CÁCH CHẠY VÀ PHÁT TRIỂN**
 
-1. **Frontend** gọi API từ **Backend** thông qua proxy
-2. **Backend** trả về dữ liệu JSON
-3. **Frontend** hiển thị dữ liệu với animation
+### **Chạy Development**
 
-### 3. State Management
+```bash
+npm start          # Chạy development server
+npm run build      # Build cho production
+npm run deploy     # Deploy lên GitHub Pages
+```
 
-- Sử dụng React Hooks (`useState`, `useEffect`)
-- Local Storage cho dark mode
-- API calls với async/await
+### **Cấu trúc Development**
 
-### 4. Animation
+1. **Code** → Viết code trong `src/`
+2. **Test** → Kiểm tra trên localhost:3000
+3. **Build** → Tạo file production
+4. **Deploy** → Đẩy lên hosting
 
-- Framer Motion cho smooth animations
-- CSS transitions cho hover effects
-- Scroll-triggered animations
+## 📝 **QUY TẮC CODE**
+
+### **1. Đặt tên file**
+
+- **Component**: PascalCase (Header.js, Hero.js)
+- **CSS**: Kebab-case (header.css, hero.css)
+- **Constants**: UPPER_SNAKE_CASE
+
+### **2. Cấu trúc Component**
+
+```javascript
+// 1. Imports
+import React from "react";
+
+// 2. Component function
+const ComponentName = () => {
+  // 3. State management
+  const [state, setState] = useState();
+
+  // 4. Effects
+  useEffect(() => {}, []);
+
+  // 5. Event handlers
+  const handleClick = () => {};
+
+  // 6. Render
+  return <div>Content</div>;
+};
+
+// 7. Export
+export default ComponentName;
+```
+
+### **3. CSS Organization**
+
+- **Global**: index.css
+- **Component**: component.css
+- **Responsive**: Media queries trong mỗi file
+
+## 🎯 **HỌC TẬP THEO THỨ TỰ**
+
+### **Bước 1: Hiểu cấu trúc**
+
+1. Đọc `App.js` để hiểu luồng chính
+2. Xem `index.css` để hiểu design system
+3. Kiểm tra `i18n.js` để hiểu đa ngôn ngữ
+
+### **Bước 2: Học từng component**
+
+1. **Header** → Navigation và state management
+2. **Hero** → Animation và responsive design
+3. **About** → Data display và layout
+4. **Experience** → Timeline và data mapping
+5. **Skills** → Progress bars và categories
+6. **Projects** → Cards và external links
+7. **Education** → Simple layout
+8. **Contact** → Forms và API integration
+9. **Footer** → Simple component
+
+### **Bước 3: Thực hành**
+
+1. Thay đổi nội dung trong translation files
+2. Sửa màu sắc trong CSS variables
+3. Thêm component mới
+4. Tùy chỉnh animation
+
+## 🔧 **CÔNG CỤ SỬ DỤNG**
+
+### **Frontend Libraries**
+
+- **React 18**: Framework chính
+- **Framer Motion**: Animation
+- **React Icons**: Icon library
+- **i18next**: Đa ngôn ngữ
+- **EmailJS**: Form handling
+
+### **Development Tools**
+
+- **VS Code**: Code editor
+- **Git**: Version control
+- **GitHub Pages**: Hosting
+- **Chrome DevTools**: Debugging
+
+## 📚 **TÀI LIỆU THAM KHẢO**
+
+### **React Basics**
+
+- [React Documentation](https://react.dev/)
+- [React Hooks](https://react.dev/reference/react)
+- [JSX](https://react.dev/learn/writing-markup-with-jsx)
+
+### **CSS & Styling**
+
+- [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+### **Animation**
+
+- [Framer Motion](https://www.framer.com/motion/)
+- [CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions)
 
 ---
 
-**Lưu ý**: Đây là giải thích cơ bản. Mỗi component có thể có thêm logic phức tạp hơn tùy theo yêu cầu cụ thể.
+## 🎉 **KẾT LUẬN**
+
+Website CV này được thiết kế để:
+
+- ✅ **Dễ hiểu** cho người mới học
+- ✅ **Dễ tùy chỉnh** nội dung và giao diện
+- ✅ **Responsive** trên mọi thiết bị
+- ✅ **Hiện đại** với animation và UX tốt
+- ✅ **SEO friendly** và performance cao
+
+**Chúc bạn học tập hiệu quả! 🚀**

@@ -1,164 +1,208 @@
+/* ========================================
+   CSS TOÀN CỤC - THIẾT LẬP CHUNG CHO WEBSITE
+   ======================================== */
+
+/* Reset CSS - Xóa các style mặc định của trình duyệt */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ========================================
+   CSS VARIABLES - BIẾN MÀU SẮC VÀ THIẾT LẬP
+   ======================================== */
 :root {
-  /* Colors */
-  --primary-color: #2563eb;
-  --primary-dark: #1d4ed8;
-  --secondary-color: #f59e0b;
-  --accent-color: #10b981;
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
-  --text-light: #9ca3af;
-  --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --bg-dark: #111827;
-  --border-color: #e5e7eb;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  /* ===== MÀU SẮC CHÍNH ===== */
+  --primary-color: #2563eb; /* Màu xanh dương chính */
+  --primary-dark: #1d4ed8; /* Màu xanh dương đậm */
+  --secondary-color: #f59e0b; /* Màu cam phụ */
+  --accent-color: #10b981; /* Màu xanh lá nhấn */
+
+  /* ===== MÀU CHỮ ===== */
+  --text-primary: #1f2937; /* Màu chữ chính - xám đậm */
+  --text-secondary: #6b7280; /* Màu chữ phụ - xám nhạt */
+  --text-light: #9ca3af; /* Màu chữ nhẹ - xám rất nhạt */
+
+  /* ===== MÀU NỀN ===== */
+  --bg-primary: #ffffff; /* Màu nền chính - trắng */
+  --bg-secondary: #f9fafb; /* Màu nền phụ - xám rất nhạt */
+  --bg-dark: #111827; /* Màu nền tối */
+
+  /* ===== MÀU VIỀN ===== */
+  --border-color: #e5e7eb; /* Màu viền - xám nhạt */
+
+  /* ===== BÓNG ĐỔ ===== */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* Bóng nhỏ */
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* Bóng vừa */
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
+    0 4px 6px -4px rgb(0 0 0 / 0.1); /* Bóng lớn */
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.1);
+    0 8px 10px -6px rgb(0 0 0 / 0.1); /* Bóng rất lớn */
 
-  /* Typography */
+  /* ===== FONT CHỮ ===== */
   --font-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", sans-serif;
+    "Roboto", sans-serif; /* Font chữ chính */
   --font-heading: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", sans-serif;
+    "Roboto", sans-serif; /* Font tiêu đề */
 
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
+  /* ===== KHOẢNG CÁCH ===== */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+  --spacing-3xl: 4rem; /* 64px */
 
-  /* Border Radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-2xl: 1.5rem;
+  /* ===== BO GÓC ===== */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 0.75rem; /* 12px */
+  --radius-xl: 1rem; /* 16px */
+  --radius-2xl: 1.5rem; /* 24px */
 
-  /* Transitions */
-  --transition-fast: 0.15s ease-in-out;
-  --transition-normal: 0.3s ease-in-out;
-  --transition-slow: 0.5s ease-in-out;
+  /* ===== THỜI GIAN CHUYỂN ĐỔI ===== */
+  --transition-fast: 0.15s ease-in-out; /* Chuyển đổi nhanh */
+  --transition-normal: 0.3s ease-in-out; /* Chuyển đổi bình thường */
+  --transition-slow: 0.5s ease-in-out; /* Chuyển đổi chậm */
 }
 
+/* ========================================
+   THIẾT LẬP CƠ BẢN CHO BODY
+   ======================================== */
 body {
-  font-family: var(--font-primary);
-  line-height: 1.6;
-  color: var(--text-primary);
-  background-color: var(--bg-primary);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  font-family: var(--font-primary); /* Sử dụng font chính */
+  line-height: 1.6; /* Khoảng cách dòng */
+  color: var(--text-primary); /* Màu chữ chính */
+  background-color: var(--bg-primary); /* Màu nền chính */
+  -webkit-font-smoothing: antialiased; /* Làm mịn font trên webkit */
+  -moz-osx-font-smoothing: grayscale; /* Làm mịn font trên Firefox */
+  overflow-x: hidden; /* Ẩn thanh cuộn ngang */
 }
 
+/* ========================================
+   THIẾT LẬP HTML
+   ======================================== */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Cuộn mượt khi click vào link */
 }
 
-/* Scrollbar Styling */
+/* ========================================
+   TÙY CHỈNH THANH CUỘN (SCROLLBAR)
+   ======================================== */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 8px; /* Chiều rộng thanh cuộn */
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
+  background: var(--bg-secondary); /* Màu nền thanh cuộn */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-light);
-  border-radius: var(--radius-md);
+  background: var(--text-light); /* Màu thanh cuộn */
+  border-radius: var(--radius-md); /* Bo góc thanh cuộn */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-secondary);
+  background: var(--text-secondary); /* Màu khi hover */
 }
 
-/* Selection */
+/* ========================================
+   TÙY CHỈNH VÙNG CHỌN VĂN BẢN
+   ======================================== */
 ::selection {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--primary-color); /* Màu nền khi chọn text */
+  color: white; /* Màu chữ khi chọn text */
 }
 
-/* Focus styles */
+/* ========================================
+   TÙY CHỈNH FOCUS (KHI TAB HOẶC CLICK)
+   ======================================== */
 *:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+  outline: 2px solid var(--primary-color); /* Viền xanh khi focus */
+  outline-offset: 2px; /* Khoảng cách viền */
 }
 
-/* Button reset */
+/* ========================================
+   RESET STYLES CHO CÁC ELEMENT
+   ======================================== */
+
+/* Reset button */
 button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-family: inherit;
+  border: none; /* Xóa viền */
+  background: none; /* Xóa nền */
+  cursor: pointer; /* Con trỏ tay */
+  font-family: inherit; /* Kế thừa font */
 }
 
-/* Link reset */
+/* Reset link */
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* Xóa gạch chân */
+  color: inherit; /* Kế thừa màu */
 }
 
-/* List reset */
+/* Reset list */
 ul,
 ol {
-  list-style: none;
+  list-style: none; /* Xóa dấu chấm */
 }
 
-/* Image reset */
+/* Reset image */
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  max-width: 100%; /* Không vượt quá container */
+  height: auto; /* Tự động điều chỉnh chiều cao */
+  display: block; /* Hiển thị dạng block */
 }
 
-/* Container */
+/* ========================================
+   CONTAINER - KHUNG CHỨA NỘI DUNG
+   ======================================== */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-  box-sizing: border-box;
-  width: 100%;
+  max-width: 1200px; /* Chiều rộng tối đa */
+  margin: 0 auto; /* Căn giữa */
+  padding: 0 var(--spacing-md); /* Padding hai bên */
+  box-sizing: border-box; /* Tính padding vào width */
+  width: 100%; /* Chiều rộng 100% */
 }
 
-/* Responsive container */
+/* ========================================
+   RESPONSIVE DESIGN - THIẾT KẾ ĐÁP ỨNG
+   ======================================== */
+
+/* Tablet - Màn hình vừa (1024px trở xuống) */
 @media (max-width: 1024px) {
   .container {
-    max-width: 100%;
-    padding: 0 var(--spacing-lg);
+    max-width: 100%; /* Chiều rộng 100% */
+    padding: 0 var(--spacing-lg); /* Padding lớn hơn */
   }
 }
 
+/* Mobile - Điện thoại (768px trở xuống) */
 @media (max-width: 768px) {
   html {
-    overflow-x: hidden;
+    overflow-x: hidden; /* Ẩn cuộn ngang */
   }
   .container {
-    padding: 0 var(--spacing-md);
+    padding: 0 var(--spacing-md); /* Padding vừa */
   }
 }
 
+/* Small Mobile - Điện thoại nhỏ (480px trở xuống) */
 @media (max-width: 480px) {
   html {
-    overflow-x: hidden;
+    overflow-x: hidden; /* Ẩn cuộn ngang */
   }
   .container {
-    padding: 0 var(--spacing-sm);
+    padding: 0 var(--spacing-sm); /* Padding nhỏ */
   }
 }
 
-/* Utility classes */
+/* ========================================
+   UTILITY CLASSES - CÁC LỚP TIỆN ÍCH
+   ======================================== */
+
+/* Căn chỉnh text */
 .text-center {
   text-align: center;
 }
@@ -169,6 +213,7 @@ img {
   text-align: right;
 }
 
+/* Margin bottom */
 .mb-1 {
   margin-bottom: var(--spacing-sm);
 }
@@ -185,6 +230,7 @@ img {
   margin-bottom: var(--spacing-2xl);
 }
 
+/* Margin top */
 .mt-1 {
   margin-top: var(--spacing-sm);
 }
@@ -201,6 +247,7 @@ img {
   margin-top: var(--spacing-2xl);
 }
 
+/* Padding */
 .p-1 {
   padding: var(--spacing-sm);
 }
@@ -217,22 +264,25 @@ img {
   padding: var(--spacing-2xl);
 }
 
-/* Additional responsive utilities */
+/* ========================================
+   RESPONSIVE UTILITIES - TIỆN ÍCH ĐÁP ỨNG
+   ======================================== */
+
+/* Mobile utilities */
 @media (max-width: 768px) {
   .text-center-mobile {
     text-align: center;
   }
-
   .hide-mobile {
     display: none;
   }
 }
 
+/* Small mobile utilities */
 @media (max-width: 480px) {
   .text-center-small {
     text-align: center;
   }
-
   .hide-small {
     display: none;
   }
