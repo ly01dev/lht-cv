@@ -27,7 +27,8 @@
       "telegram": "Telegram",
       "telegramValue": "@stephen_itweb",
       "scanToConnect": "Scan to connect"
-    }
+    },
+    "birthDate": "Date of Birth"
   },
   "about": {
     "title": "About Me",

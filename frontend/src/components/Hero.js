@@ -207,6 +207,19 @@ const Hero = () => {
               <div className="profile-image-border"></div>
             </div>
             
+            {/* Thông tin ngày sinh */}
+            <motion.div
+              className="birth-date-info"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+            >
+              <div className="birth-date-container">
+                <span className="birth-date-label">{t('hero.birthDate')}</span>
+                <span className="birth-date-value">29/04/1984</span>
+              </div>
+            </motion.div>
+            
             <motion.div
               className="hero-social"
               initial={{ opacity: 0, y: 30 }}

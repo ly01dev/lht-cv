@@ -724,3 +724,108 @@
   color: var(--primary-color);
   border-color: var(--primary-color);
 }
+
+/* Birth Date Info Styling */
+.birth-date-info {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+}
+
+.birth-date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.birth-date-container:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.birth-date-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.birth-date-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+}
+
+/* Responsive styling for birth date */
+@media (max-width: 1024px) {
+  .birth-date-container {
+    padding: var(--spacing-sm);
+  }
+
+  .birth-date-label {
+    font-size: 0.8rem;
+  }
+
+  .birth-date-value {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .birth-date-info {
+    margin-top: var(--spacing-md);
+  }
+
+  .birth-date-container {
+    padding: var(--spacing-sm);
+  }
+
+  .birth-date-label {
+    font-size: 0.75rem;
+  }
+
+  .birth-date-value {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .birth-date-info {
+    margin-top: var(--spacing-sm);
+  }
+
+  .birth-date-container {
+    padding: var(--spacing-xs);
+  }
+
+  .birth-date-label {
+    font-size: 0.7rem;
+  }
+
+  .birth-date-value {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .birth-date-container {
+    padding: var(--spacing-xs);
+  }
+
+  .birth-date-label {
+    font-size: 0.65rem;
+  }
+
+  .birth-date-value {
+    font-size: 0.8rem;
+  }
+}

@@ -27,7 +27,8 @@
       "telegram": "Telegram",
       "telegramValue": "@stephen_itweb",
       "scanToConnect": "Quét mã để kết nối"
-    }
+    },
+    "birthDate": "Ngày sinh"
   },
   "about": {
     "title": "Về tôi",
