@@ -59,6 +59,7 @@ body {
   background-color: var(--bg-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 html {
@@ -127,6 +128,8 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* Responsive container */
@@ -138,12 +141,18 @@ img {
 }
 
 @media (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
   .container {
     padding: 0 var(--spacing-md);
   }
 }
 
 @media (max-width: 480px) {
+  html {
+    overflow-x: hidden;
+  }
   .container {
     padding: 0 var(--spacing-sm);
   }
